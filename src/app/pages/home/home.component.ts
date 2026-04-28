@@ -14,10 +14,6 @@ export class HomeComponent {
 
   search = signal('');
 
-  ngOnInit() {
-    this.filmService.loadFilms();
-  }
-
   filteredFilms = computed(() => {
     const query = this.search().toLowerCase();
 

@@ -78,16 +78,12 @@ div:has(> :only-child) {
 .card button {
   margin: 12px;
   padding: 8px 10px;
-
   border: none;
   border-radius: 8px;
-
   background: #1e293b;
   color: #e2e8f0;
-
   font-size: 13px;
   cursor: pointer;
-
   transition: 0.2s ease;
 
   &:hover {
