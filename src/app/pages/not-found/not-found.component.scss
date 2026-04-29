@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px;
+}
+
+.not-found {
+  text-align: center;
+  color: #e2e8f0;
+
+  h1 {
+    font-size: 96px;
+    margin: 0;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 12px 0 24px;
+    color: #94a3b8;
+  }
+}
+
+.home-link {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #334155;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}

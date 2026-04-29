@@ -1,0 +1,25 @@
+@if (film()) {
+  <div class="details">
+    <button class="back-btn" [routerLink]="['/']">← Back</button>
+
+    <div class="details-container">
+      <img class="poster" [src]="film()?.posterUrl" alt="Poster"/>
+
+      <div class="info">
+        <h1>{{ film()?.title }}</h1>
+
+        @if (film(); as f) {
+          <p class="meta">{{ film()?.year }} • {{ film()?.genre }} • {{ f.duration | duration }}</p>
+        }
+        
+        <p class="rating">⭐ {{ film()?.rating }}</p>
+
+        <p class="description">
+          {{ film()?.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="not-found">Film not found</div>
+}

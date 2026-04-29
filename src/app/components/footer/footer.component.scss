@@ -1,0 +1,38 @@
+:host {
+  width: 100%;
+}
+
+.footer {
+  background: #0f172a;
+  color: #e2e8f0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  color: #38bdf8;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #38bdf8;
+  }
+}
+
+.github-icon {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
