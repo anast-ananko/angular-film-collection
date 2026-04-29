@@ -1,11 +1,12 @@
 import { Component, computed, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { FilmService } from '../../services/film.service';
-import { RouterLink } from '@angular/router';
+import { AutofocusDirective } from '../../directives/autofocus.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, AutofocusDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
