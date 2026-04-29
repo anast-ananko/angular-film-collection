@@ -1,21 +1,17 @@
-import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 
 import { Film } from '../types/types';
+import filmsData from '../../assets/films.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FilmService {
-  private http = inject(HttpClient);
-
   private _films = signal<Film[]>([]);
   films = this._films.asReadonly();
 
   loadFilms(): void {
-    this.http.get<Film[]>('assets/films.json').subscribe((data) => {
-      this._films.set(data);
-    });
+    this._films.set(filmsData);
   }
 
   toggleFavorite(id: number): void {
