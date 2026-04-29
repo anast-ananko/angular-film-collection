@@ -11,20 +11,6 @@
 
 <div class="grid">
   @for (film of filteredFilms(); track film.id) {
-    <div class="card" [routerLink]="['/film', film.id]">
-      <img [src]="film.posterUrl" />
-
-      <h3>{{ film.title }}</h3>
-      <p>{{ film.year }} • {{ film.genre }}</p>
-      <p>⭐ {{ film.rating }}</p>
-
-      <button class="favorite-btn" (click)="toggleFavorite(film.id); $event.stopPropagation()">
-        <span class="icon">
-          {{ film.isFavorite ? '⭐' : '☆' }}
-        </span>
-
-        {{ film.isFavorite ? 'Remove' : 'Add' }} favorite
-      </button>
-    </div>
+    <app-film-card [film]="film" (favoriteToggle)="toggleFavorite($event)" />
   }
 </div>
