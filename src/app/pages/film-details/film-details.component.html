@@ -8,8 +8,10 @@
       <div class="info">
         <h1>{{ film()?.title }}</h1>
 
-        <p class="meta">{{ film()?.year }} • {{ film()?.genre }} • {{ film()?.duration }}</p>
-
+        @if (film(); as f) {
+          <p class="meta">{{ film()?.year }} • {{ film()?.genre }} • {{ f.duration | duration }}</p>
+        }
+        
         <p class="rating">⭐ {{ film()?.rating }}</p>
 
         <p class="description">
